@@ -35,17 +35,17 @@
 
 ### Bước 1: Tạo database và bảng
 1. Mở file `01_create_tables_and_sample_data.sql` trong MySQL Workbench.
-2. Chạy toàn bộ file để tạo database `mini_netflix`, các bảng và dữ liệu gói cước ban đầu.
+2. Chạy toàn bộ file để tạo database `mini_netflix`.
 
 ### Bước 2: Giải nén dữ liệu CSV
 1. Giải nén file `.rar` ra một thư mục trên máy (ví dụ: `D:/python/csv_output/`).
 2. Kiểm tra bên trong thư mục có đủ các file `.csv` (`tv_series.csv`, `content.csv`, `movie.csv`, `episode.csv`, `content_genre.csv`, `user.csv`, `profile.csv`, `watches.csv`, `saves_to.csv`).
 
 ### Bước 3: Nạp dữ liệu CSV vào MySQL
-1. Mở file SQL nạp dữ liệu trong MySQL Workbench.
+1. Mở file 02_file_load_csv>.sql trong MySQL Workbench.
 2. **Sửa đường dẫn thư mục CSV** trong file SQL cho khớp với thư mục vừa giải nén trên máy của bạn (dùng dấu `/` hoặc `\\`, ví dụ `D:/python/csv_output/`).
 3. Chạy file SQL để nạp dữ liệu theo đúng thứ tự bảng cha -> bảng con.
-   - *Lưu ý:* Khi nạp bảng lớn như `WATCHES`, nên tạm tắt trigger `INSERT` (nếu có) và bật lại ngay sau khi nạp để chạy nhanh hơn.
+   - *Lưu ý:* Khi nạp bảng lớn như `WATCHES` và `SAVES_TO`, nên tạm tắt trigger `INSERT` (nếu có) và bật lại ngay sau khi nạp để chạy nhanh hơn.(thời gian chạy khoảng 10s)
 
 ### Bước 4: Tạo Trigger, View và chạy truy vấn kiểm tra
 1. Mở file `03_triggers_views_and_queries.sql`.
