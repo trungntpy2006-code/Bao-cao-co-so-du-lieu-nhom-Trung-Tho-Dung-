@@ -19,6 +19,7 @@
     SET GLOBAL local_infile = 1;
     SHOW VARIABLES LIKE 'local_infile'; -- Đảm bảo giá trị là ON
     ```
+    **Lưu ý: Các lệnh bật/kiểm tra local_infile đã được thêm sẵn vào đầu file 02_file_load_csv>.sql, nên nếu đã cấu hình connection Workbench rồi thì bạn có thể không cần chạy riêng lẻ trước bước này.
 
 ---
 
