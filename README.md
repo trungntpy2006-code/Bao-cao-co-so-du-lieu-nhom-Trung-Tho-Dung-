@@ -25,7 +25,7 @@
 ## 2. Cấu trúc tài liệu trong gói nộp
 - `01_create_tables_and_sample_data.sql`: Tạo database `mini_netflix`, các bảng, ràng buộc khóa chính/khóa ngoại/check và dữ liệu gói cước mặc định (`SUBSCRIPTION_TIER`).
 - `csv_output.rar` *(hoặc file `.rar` dữ liệu)*: Chứa sẵn các file `.csv` dữ liệu mẫu đã được sinh sẵn để dùng ngay.
-- `<file_load_csv>.sql`: Xóa dữ liệu cũ (nếu cần) và nạp toàn bộ file `.csv` vào các bảng theo đúng thứ tự khóa ngoại bằng `LOAD DATA LOCAL INFILE`.
+- `<02_file_load_csv>.sql`: Xóa dữ liệu cũ (nếu cần) và nạp toàn bộ file `.csv` vào các bảng theo đúng thứ tự khóa ngoại bằng `LOAD DATA LOCAL INFILE`.
 - `03_triggers_views_and_queries.sql`: Tạo trigger, view và các câu truy vấn kiểm tra/nâng cao.
 - `<script_sinh_du_lieu>.py` *(tùy chọn)*: Script Python sinh dữ liệu CSV nếu muốn tự tạo bộ dữ liệu mới.
 
