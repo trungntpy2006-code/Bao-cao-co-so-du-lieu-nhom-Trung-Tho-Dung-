@@ -46,7 +46,7 @@
 1. Mở file 02_file_load_csv>.sql trong MySQL Workbench.
 2. **Sửa đường dẫn thư mục CSV** trong file SQL cho khớp với thư mục vừa giải nén trên máy của bạn (dùng dấu `/` hoặc `\\`, ví dụ `D:/python/csv_output/`).
 3. Chạy file SQL để nạp dữ liệu theo đúng thứ tự bảng cha -> bảng con.
-   - *Lưu ý:* Khi nạp bảng lớn như `WATCHES` và `SAVES_TO`, nên tạm tắt trigger `INSERT` (nếu có) và bật lại ngay sau khi nạp để chạy nhanh hơn.(thời gian chạy khoảng 20s)
+   - *Lưu ý:* Khi nạp bảng lớn như `WATCHES` và `SAVES_TO` có khoảng 300k dòng, nên tạm tắt trigger `INSERT` (nếu có) và bật lại ngay sau khi nạp để chạy nhanh hơn.(thời gian chạy khoảng 20s)
 
 ### Bước 4: Tạo Trigger, View và chạy truy vấn kiểm tra
 1. Mở file `03_triggers_views_and_queries.sql`.
